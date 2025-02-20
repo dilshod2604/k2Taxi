@@ -51,17 +51,17 @@
           "backgroundColor": "#FBBB00"
         }
       ]
-      // [
-      //   "expo-location",
-      //   {
-      //     "locationAlwaysAndWhenInUsePermission": "Разрешить приложению использовать ваше местоположение всегда и при использовании.",
-      //     "locationAlwaysPermission": "Разрешить приложению всегда использовать ваше местоположение.",
-      //     "locationWhenInUsePermission": "Разрешить приложению использовать ваше местоположение, пока оно открыто."
-      //   }
-      // ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ffea5963-fbae-4ca1-9d2c-39cce00a7cb8"
+      }
     }
   }
 }
