@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "k2taxi-driver",
+    "slug": "k2taxi-driver",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo.png",
+    "backgroundColor": "#FBBB00",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "splash": {
+        "backgroundColor": "#FBBB00",
+        "resizeMode": "contain",
+        "image": "./assets/images/logo.png"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo.png",
+        "backgroundColor": "#FBBB00"
+      },
+      "splash": {
+        "backgroundColor": "#FBBB00",
+        "resizeMode": "contain",
+        "image": "./assets/images/logo.png"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.anonymous.k2taxidriver"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/logo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#FBBB00"
+        }
+      ]
+      // [
+      //   "expo-location",
+      //   {
+      //     "locationAlwaysAndWhenInUsePermission": "Разрешить приложению использовать ваше местоположение всегда и при использовании.",
+      //     "locationAlwaysPermission": "Разрешить приложению всегда использовать ваше местоположение.",
+      //     "locationWhenInUsePermission": "Разрешить приложению использовать ваше местоположение, пока оно открыто."
+      //   }
+      // ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
