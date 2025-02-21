@@ -1,5 +1,6 @@
 import { useGetUsersQuery } from "@/redux/api/auth";
 import React, {
+  ReactNode,
   useCallback,
   useEffect,
   useMemo,
@@ -37,6 +38,7 @@ import { router } from "expo-router";
 import * as Location from "expo-location";
 import { useUserLocationStore } from "@/store/useUserLocationStore";
 import GoogleSearchInput from "@/components/ui/GoogleSearchInput";
+import Products from "@/components/Products";
 
 const ButtonIcon = ({
   className,
@@ -46,7 +48,7 @@ const ButtonIcon = ({
   icon: ImageSourcePropType;
 }) => <Image source={icon} className={className} resizeMode="cover" />;
 
-const HomePage = () => {
+const HomePage = ({ children }: { children?: ReactNode }) => {
   const [userId, setIserId] = useState<string>();
   const sheetRef = useRef<BottomSheet>(null);
   const snapPoints = useMemo(() => ["80%"], []);
@@ -142,7 +144,7 @@ const HomePage = () => {
       </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerClassName="flex flex-col flex-1 px-4 gap-y-7"
+        contentContainerClassName="flex flex-col px-4 gap-y-7"
       >
         <View className="flex flex-row items-center gap-x-4 mt-5 pr-4 ">
           <Cards
@@ -170,7 +172,7 @@ const HomePage = () => {
             resizeMode="contain"
             title="Такси"
             textStyle="w-full text-center absolute bottom-[-20px]"
-            // onPress={() => router.push("/(root)/(map)/ride")}
+            onPress={() => router.push("/(root)/(map)/ride")}
           />
           <CustomButton
             onPress={handleOpenBottomSheet}
@@ -185,6 +187,7 @@ const HomePage = () => {
             )}
           />
         </View>
+        <Products />
       </ScrollView>
       <CustomBottomSheet
         snapPoints={snapPoints}

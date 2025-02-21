@@ -55,11 +55,11 @@ export default function Home() {
     return <Redirect href="/(auth)/start" />;
   }
 
-  if (!data) {
-    return (
-      <Redirect href={hasOnboarded ? "/(auth)/start" : "/(auth)/onboarding"} />
-    );
-  }
+  // if (!data) {
+  //   return (
+  //     <Redirect href={hasOnboarded ? "/(auth)/start" : "/(auth)/onboarding"} />
+  //   );
+  // }
 
   return <Redirect href="/(root)/(tabs)/home" />;
 }

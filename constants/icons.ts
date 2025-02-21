@@ -37,7 +37,11 @@ import dollar from "../assets/icons/dollar.png";
 import taxi from "../assets/icons/taxi-car.png";
 import chat3d from "../assets/icons/chat3d.png";
 import empty from "../assets/icons/epmty.png";
+import heart_black from "../assets/icons/heart_black.png"
+import heart_red from "../assets/icons/heart_red.png"
 export default {
+  heart_red,
+  heart_black,
   empty,
   chat3d,
   taxi,
